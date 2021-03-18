@@ -8,7 +8,8 @@ This application displays any dead links contained at the given URL. It keeps on
 
 ## Installation
 
-Type `make install` installs `find-dead-links` into your `~/bin`
+Type `make install` installs `find-dead-links` into your `~/bin`.
+
 If you prefer to install it in another directory, type `make install INSTALL_DIR=<PREFERED_DIR>`
 
 ## Running
