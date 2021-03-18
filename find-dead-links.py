@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 
 import requests
 from bs4 import BeautifulSoup
@@ -15,7 +14,9 @@ def finddeadlinks(url, depth, pre=' ', count=0):
             soup = BeautifulSoup(res.text, "html.parser")
             for a in soup.find_all('a', href=True):
                 count = temp
-                if a['href'].startswith('http'):
+                if a['href'].startswith('#'):
+                    return 0
+                elif a['href'].startswith('http'):
                     if depth != count:
                         count += 1
                         finddeadlinks(a['href'], depth, url, count)
